@@ -4,6 +4,8 @@ use crate::IntersectionState::EMPTY;
 use crate::IntersectionState::WHITE;
 use std::fmt;
 
+//hello github!
+
 #[derive(Clone, PartialEq, Copy)]
 enum IntersectionState {
     EMPTY,
