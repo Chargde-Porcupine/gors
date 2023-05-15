@@ -39,6 +39,20 @@ functions needed:
  (should happen after each turn on the stone placed and those around it
  */
 
+fn remove_stone(x: usize, y:usize, board: &mut Vec<Vec<IntersectionState>>) -> Result<Vec<Vec<IntersectionState>>, &'static str>{
+    match get_stone(x,y,board) {
+        None => Err("Index out of bounds"),
+        Some(val) => {
+            if val.to_owned() != EMPTY {
+                board[y][x] = EMPTY;
+                Ok(board.to_vec())
+            } else {
+                Err("Cannot clear non-empty stone.")
+            }
+        }
+    }
+}
+
 fn get_stone(
     x: usize,
     y: usize,
