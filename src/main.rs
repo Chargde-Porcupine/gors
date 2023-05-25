@@ -39,6 +39,11 @@ functions needed:
  (should happen after each turn on the stone placed and those around it
  */
 
+fn clear_group(x:usize, y:usize, board: &mut Vec<Vec<IntersectionState>>) -> Result<Vec<Vec<IntersectionState>>, &'static str> {
+    //create a vector for stones to be cleared
+    Err("Hi")
+}
+
 fn remove_stone(x: usize, y:usize, board: &mut Vec<Vec<IntersectionState>>) -> Result<Vec<Vec<IntersectionState>>, &'static str>{
     match get_stone(x,y,board) {
         None => Err("Index out of bounds"),
